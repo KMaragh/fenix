@@ -27,7 +27,7 @@ android {
         versionName Config.generateDebugVersionName()
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        testInstrumentationRunnerArguments clearPackageData: 'true'
+        testInstrumentationRunnerArguments clearPackageData: 'true', notAnnotation: 'androidx.test.filters.FlakyTest'
         manifestPlaceholders.isRaptorEnabled = "false"
         resValue "bool", "IS_DEBUG", "false"
         buildConfigField "boolean", "USE_RELEASE_VERSIONING", "false"
